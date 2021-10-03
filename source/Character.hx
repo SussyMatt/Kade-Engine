@@ -378,6 +378,18 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
+				
+			case 'matt':
+				frames = Paths.getSparrowAtlas('matt','shared',true);
+				animation.addByPrefix('idle', 'matt idle', 24, false);
+				animation.addByPrefix('singUP', 'matt up note', 24, false);
+				animation.addByPrefix('singDOWN', 'matt down note', 24, false);
+				animation.addByPrefix('singLEFT', 'matt left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'matt right note', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
 		}
 
 		dance();
