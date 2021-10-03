@@ -395,6 +395,26 @@ class Stage
 							add(waveSpriteFG);
 						 */
 					}
+				case 'arena':
+					{
+						camZoom = 0.8;
+						curStage = 'arena';
+						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('met/arena-bg', 'mettWikk'));
+						bg.antialiasing = FlxG.save.data.antialiasing;
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						swagBacks['bg'] = bg;
+			toAdd.push(bg);
+		
+						var audience:FlxSprite = new FlxSprite(-200, 480);
+						audience.frames = Paths.getSparrowAtlas('met/arena-characters', 'mettWikk');
+						audience.animation.addByPrefix('bop', "bg-characters", 24);
+						audience.animation.play('bop');
+						audience.scrollFactor.set(0.4, 0.4);
+						audience.antialiasing = FlxG.save.data.antialiasing;
+					    swagBacks['audience'] = audience;
+                        toAdd.push(audience);
+					}
 				default:
 					{
 						camZoom = 0.9;
