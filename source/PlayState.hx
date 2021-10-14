@@ -138,6 +138,8 @@ class PlayState extends MusicBeatState
 	public static var dad:Character;
 	public static var gf:Character;
 	public static var boyfriend:Boyfriend;
+	public static var punching:Character;
+	public static var daddy:Character;
 
 	public var notes:FlxTypedGroup<Note>;
 
@@ -240,6 +242,9 @@ class PlayState extends MusicBeatState
 
 	public static var repPresses:Int = 0;
 	public static var repReleases:Int = 0;
+	
+	public var ispunching:Bool = false;
+	public var isdaddy:Bool = false;
 
 	public static var timeCurrently:Float = 0;
 	public static var timeCurrentlyR:Float = 0;
